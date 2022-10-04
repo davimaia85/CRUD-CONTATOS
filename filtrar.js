@@ -9,14 +9,14 @@ function filtrar(){
         if (isNaN(posicao)){
             continue;
         }
-        //filtrar os nomes da coluna 1 (item)
-        let coluna1 = linhas[posicao].children[1].innerText.toLowerCase();
-        //quantidade
+        //filtrar os nomes (coluna 2)
         let coluna2 = linhas[posicao].children[2].innerText.toLowerCase();
+        //telefone
+        let coluna3 = linhas[posicao].children[3].innerText.toLowerCase();
+        //cidade
+        let coluna4 = linhas[posicao].children[4].innerText.toLowerCase();
 
-        let colunas = coluna1 + coluna2;
-        
-        //let linha = linhas[posicao].innerText.toLowerCase();
+        let colunas = coluna2 + coluna3 + coluna4;
         
         //se dentro da linha atual (<tr>)
         if (colunas.includes(expressao)){
