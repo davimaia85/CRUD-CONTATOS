@@ -30,6 +30,8 @@ function editar(){
 
     };
 
+    //validacao 
+
     let titulo1 = document.getElementById('input_editar_nome').value;
     if(titulo1.trim() === ''){
         alert("Digite um nome!");
@@ -47,6 +49,8 @@ function editar(){
         alert("Informe a cidade!");
         return
     }
+
+    //fim da validacao
     
     fetch(API_URL+'/contatos/'+input_editar_id.value, {
         method: 'PATCH',
@@ -58,7 +62,7 @@ function editar(){
     .then(resposta => resposta.json())
     .then(resposta => atualizarLista())
 
-    let x = document.querySelector('[data-bs-dismiss="offcanvas"]'); //querySelector busca um comando especifico no html
+    let x = document.querySelector('[data-bs-dismiss="offcanvas"]'); 
     x.dispatchEvent(new Event('click')); //disparar um novo evento na variavel x para ativar o comando 
 }
 
@@ -67,9 +71,11 @@ function inserir(){
     
     let dados = {
         nome: inputNome.value,
-        telefone: inputTelefone.value, //parseInt(inputTelefone.value),
+        telefone: inputTelefone.value, 
         cidade: inputCidade.value,
     };
+
+//validacao
 
     let titulo1 = document.getElementById('inputNome').value;
     if(titulo1.trim() === ''){
@@ -89,6 +95,8 @@ function inserir(){
         return
     }
 
+//fim da validacao    
+
     fetch(API_URL+'/contatos', {
         method: 'POST',
         body: JSON.stringify(dados),
@@ -102,7 +110,7 @@ function inserir(){
     form_add.reset(); //limpa o formulario apos inserir novo item
 }
 
-
+//aguardar resposta da api
 async function excluir (id){
 
     let resposta = confirm('Tem certeza?');
@@ -134,10 +142,10 @@ function atualizarLista(){
                 <td>${cadaItem.telefone}</td>
                 <td>${cadaItem.cidade}</td>
                 <td>
-                <button onclick="buscarParaEditar(${cadaItem.id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar" class="btn btn-warning">
+                <button onclick="buscarParaEditar(${cadaItem.id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar" class="btn btn-success">
                     Editar
                     </button>
-                    <button onclick="excluir(${cadaItem.id})" class="btn btn-danger">
+                    <button onclick="excluir(${cadaItem.id})" class="btn btn-dark">
                     Excluir
                     </button>
                 </td>
