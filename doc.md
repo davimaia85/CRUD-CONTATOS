@@ -1,11 +1,11 @@
-************************* CRUD LISTA DE CONTATOS ************************
+************************************************* CRUD LISTA DE CONTATOS *****************************************************
 
-Esta projeto permite gerenciar uma lista de contatos telefônicos a partir de
-dados como nome, número do telefone e cidade. A lista possui as funcionalidades 
-de inclusão de um novo contato, edição dos dados do contato, exclusão de um contato e busca por um contato específico.
+Esta projeto permite gerenciar uma lista de contatos telefônicos a partir de dados como nome, número do telefone e cidade. 
+A lista possui as funcionalidades de inclusão de um novo contato, edição dos dados do contato, exclusão de um contato e 
+busca por um contato específico.
 
-Como base para o banco de dados é utilizado a biblioteca JSON-SERVER que simula 
-um banco de dados com API REST. O endereço da API gerada é http://localhost:8000/contatos onde os dados serão armazenados com suas respectivos números de identificação (id). 
+Como base para o banco de dados é utilizado a biblioteca JSON-SERVER que simula um banco de dados com API REST. O endereço da 
+API gerada é http://localhost:8000/contatos onde os dados serão armazenados com suas respectivos números de identificação (id). 
 
 Executando o CRUD-CONTATOS:
 
@@ -18,7 +18,8 @@ Executando o CRUD-CONTATOS:
 4- após estes passos a aplicação poderá ser iniciada no arquivo index.html.
 
 OBSERVAÇÃO:
-Em caso de erro: npm ERR! request to https://registry.npmjs.org/json-server failed, reason: self signed certificate in certificate chain. Siga os seguintes comandos:
+Em caso de erro: npm ERR! request to https://registry.npmjs.org/json-server failed, reason: self signed certificate in
+certificate chain. Siga os seguintes comandos:
 
 a)npm set strict-ssl false 
 b)npm config set registry http://registry.npmjs.org/  
